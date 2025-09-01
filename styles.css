@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background-color: #f4f4f4;
+}
+
+.profile-card {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  animation: fadeIn 1s ease-in;
+}
+
+.image-section {
+  flex: 1 1 200px;
+  padding: 1rem;
+}
+
+.image-section img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.info-section {
+  flex: 2 1 300px;
+  padding: 1rem;
+}
+
+input, button {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .profile-card {
+    flex-direction: column;
+  }
+
+  .image-section, .info-section {
+    flex: 1 1 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Optional Float-based layout */
+.float-layout img {
+  float: left;
+  margin-right: 15px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.float-layout .info {
+  overflow: hidden; /* Ensures text wraps nicely */
+}
